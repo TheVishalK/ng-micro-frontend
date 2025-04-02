@@ -1,0 +1,14 @@
+<ul class="remote-menu">
+  <li><a routerLink="/">Home</a></li>
+  <li><a routerLink="auth">Auth</a></li>
+  <li><a routerLink="products">Products</a></li>
+</ul>
+<div class="dashboard-nav">Admin Dashboard</div>
+    @if (isLoggedIn$ | async) {
+      <h2> You are authenticated so you can see this content.</h2>
+      } 
+      @else {
+        <router-outlet></router-outlet>
+      }
+    <!-- <ng-template #signIn><router-outlet></router-outlet></ng-template> -->
+<!-- <router-outlet></router-outlet> -->
