@@ -3,10 +3,11 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { UserService } from '@ng-micro-frontend/data-access';
 import { inject } from '@angular/core';
+import { ButtonComponent } from '@ng-micro-frontend/button';
 
 @Component({
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, ButtonComponent],
   selector: 'ng-micro-frontend-auth-entry',
   template: `
     <div class="login-app">
@@ -21,6 +22,7 @@ import { inject } from '@angular/core';
         </label>
         <button type="submit">Login</button>
       </form>
+      <lib-button>My Shared Button</lib-button>
       <div *ngIf="isLoggedIn$ | async">User is logged in! <button (click)="logout()">Logout</button></div>
     </div>
   `,

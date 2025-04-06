@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@ng-micro-frontend/button": ["libs/shared/components/src/index.ts"],
       "@ng-micro-frontend/data-access": [
         "libs/shared/data-access/src/index.ts"
       ],
